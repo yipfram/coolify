@@ -52,6 +52,8 @@ class General extends Component
 
     public ?string $customDockerRunOptions = null;
 
+    public ?string $shmSize = null;
+
     public bool $enableSsl = false;
 
     public ?string $sslMode = null;
@@ -95,6 +97,7 @@ class General extends Component
             'publicPort' => 'nullable|integer',
             'isLogDrainEnabled' => 'nullable|boolean',
             'customDockerRunOptions' => 'nullable',
+            'shmSize' => 'nullable|string',
             'enableSsl' => 'boolean',
             'sslMode' => 'nullable|string|in:allow,prefer,require,verify-ca,verify-full',
         ];
@@ -133,6 +136,7 @@ class General extends Component
         'isPublic' => 'Is Public',
         'publicPort' => 'Public Port',
         'customDockerRunOptions' => 'Custom Docker Run Options',
+        'shmSize' => 'Shared Memory Size',
         'enableSsl' => 'Enable SSL',
         'sslMode' => 'SSL Mode',
     ];
@@ -178,6 +182,7 @@ class General extends Component
             $this->database->public_port = $this->publicPort;
             $this->database->is_log_drain_enabled = $this->isLogDrainEnabled;
             $this->database->custom_docker_run_options = $this->customDockerRunOptions;
+            $this->database->shm_size = $this->shmSize;
             $this->database->enable_ssl = $this->enableSsl;
             $this->database->ssl_mode = $this->sslMode;
             $this->database->save();
@@ -200,6 +205,7 @@ class General extends Component
             $this->publicPort = $this->database->public_port;
             $this->isLogDrainEnabled = $this->database->is_log_drain_enabled;
             $this->customDockerRunOptions = $this->database->custom_docker_run_options;
+            $this->shmSize = $this->database->shm_size;
             $this->enableSsl = $this->database->enable_ssl;
             $this->sslMode = $this->database->ssl_mode;
             $this->db_url = $this->database->internal_db_url;

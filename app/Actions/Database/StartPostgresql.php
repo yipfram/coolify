@@ -120,6 +120,7 @@ class StartPostgresql
                         'retries' => 10,
                         'start_period' => '5s',
                     ],
+                    'shm_size' => $this->database->shm_size ?? '256mb',
                     'mem_limit' => $this->database->limits_memory,
                     'memswap_limit' => $this->database->limits_memory_swap,
                     'mem_swappiness' => $this->database->limits_memory_swappiness,
