@@ -627,6 +627,15 @@ All notable changes to this project will be documented in this file.
 - *(api)* Add DELETE endpoint for preview deployments by PR id (#9614)
 - *(security)* Support expiration on API tokens with warning notifications
 - *(security)* Add expiration support for API tokens (#9677)
+- *(service)* Disable calcom
+- *(service)* Disable calcom (#9776)
+- *(service)* Add healthcheck to langfuse-worker
+- *(service)* Add healthcheck to langfuse-worker (#9772)
+- Add Cap to templates
+- *(services)* Add Cap to templates (#9729)
+- *(service)* Update docker-compose according to the official doc
+- *(service)* Enable plane
+- *(service)* Enable plane (#9641)
 
 ### 🐛 Bug Fixes
 
@@ -1755,6 +1764,25 @@ All notable changes to this project will be documented in this file.
 - *(database)* Credential format validation with dirty-value escape hatch (#9676)
 - *(database)* Tighten Postgres init script filename handling
 - *(database)* Tighten Postgres init script filename handling (#9681)
+- *(navigation)* Replace wire:navigate.hover with wire:navigate
+- *(navigation)* Replace wire:navigate.hover with wire:navigate (#9742)
+- *(helper)* Add Alpine.js click toggle to info helper popup
+- *(helper)* Stop info icon click from propagating to parent on mobile (#9809)
+- *(service)* Docs link on cap-captcha.yaml
+- *(service)* Add category on cap-captcha.yaml
+- *(service)* Service url variable on cap-captcha.yaml
+- *(service)* Pin docker image on cap-captcha.yaml
+- *(service)* Add healthcheck on cap-captcha.yaml
+- *(service)* Add port to metadata on plane
+- *(service)* Twenty fails to deploy due to dependency unhealthy
+- *(service)* Twenty fails to deploy due to dependency unhealthy (#9603)
+- *(templates)* Restore Jitsi Meet service template (#4813)
+- *(service)* Add missing category to jitsi
+- *(service)* Remove volume declaration on jitsi
+- *(service)* Jitsi Meet doesn't work (#9594)
+- Add missing database alteration step for latest image version
+- *(service)* Add missing database alteration step for Logto latest image (#9376)
+- *(service)* Rally invalid next public url  (#9041)
 
 ### 💼 Other
 
@@ -2324,6 +2352,12 @@ All notable changes to this project will be documented in this file.
 - Update changelog
 - Update changelog
 - *(tests)* Replace advisory ID with descriptive comment in healthcheck injection test
+- Update changelog
+- *(sponsors)* Add PrivateAlps to Huge and YouStable to Small sponsors
+- *(sponsors)* Update PrivateAlps description
+- *(sponsors)* Add MindedTech to Small sponsors
+- *(sponsors)* Add NetRouting to Small sponsors
+- *(sponsors)* Add ParsecPH to Small sponsors
 
 ### ⚡ Performance
 
@@ -2617,6 +2651,9 @@ All notable changes to this project will be documented in this file.
 - *(ui)* Add a deprecated notice component
 - *(swarm)* Mark docker swarm as deprecated
 - Mark v4 docker swarm support as deprecated (#9621)
+- *(service)* Update beszel to 0.18.7
+- *(service)* Update beszel-agent to 0.18.7
+- *(service)* Update beszel to 0.18.7 (#9775)
 
 ### ◀️ Revert
 
