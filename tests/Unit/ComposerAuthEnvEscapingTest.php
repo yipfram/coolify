@@ -74,11 +74,10 @@ it('realValue accessor still escapes non-JSON values with quotes', function () {
     $env->shouldReceive('getAttribute')->with('value')->andReturn('hello "world"');
     $env->shouldReceive('getAttribute')->with('is_literal')->andReturn(false);
     $env->shouldReceive('getAttribute')->with('is_multiline')->andReturn(false);
-    $env->shouldReceive('getAttribute')->with('uses_legacy_escaping')->andReturn(true);
 
     $realValue = $env->real_value;
 
-    // Variables saved before exact escaping are still escaped by escapeEnvVariables
+    // Non-JSON should still be escaped by escapeEnvVariables
     expect($realValue)->toContain('\\"');
     expect($realValue)->toBe('hello \\"world\\"');
 });
